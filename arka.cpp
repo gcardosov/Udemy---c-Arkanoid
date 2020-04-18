@@ -15,6 +15,57 @@ using namespace std;
 #define ancho 1024
 #define alto 740
 
+
+//Declaracion de objetos
+//Sonidos
+//PARA EL AUDIO TIPO PUNTERO A MEMORIA
+MIDI *musicaInicio;
+MIDI *musicaJuego;
+SAMPLE *sonido_InicioJuego;
+SAMPLE *sonido_InicioNivel;
+SAMPLE *sonido_LadrilloRoto;
+SAMPLE *sonido_RebotePelota;
+SAMPLE *sonido_Revivir;
+SAMPLE *sonido_VidaExtra;
+SAMPLE *sonido_RebotaBase;
+SAMPLE *sonido_VidaPerdida;
+SAMPLE *sonido_gameOver;
+
+//Declaracion de objetos
+//Imagenes
+//Imagenes de tipo puntero
+BITMAP *buffer;
+BITMAP *logo;
+BITMAP *panel;
+BITMAP *recuadro;
+BITMAP *fondo1;
+BITMAP *fondo2;
+BITMAP *fondo3;
+BITMAP *fondo4;
+BITMAP *fondo5;
+BITMAP *gameOver;
+BITMAP *lad1;
+BITMAP *lad2;
+BITMAP *lad3;
+BITMAP *lad4;
+BITMAP *lad5;
+BITMAP *lad6;
+BITMAP *lad7;
+BITMAP *ladd;
+BITMAP *base;
+BITMAP *base2;
+BITMAP *base3;
+BITMAP *base4;
+
+
+
+
+
+
+
+
+
+
 /*Variables para la jugabilidad*/
 int retardo=100;
 int vidas=3;
