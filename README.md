@@ -14,9 +14,9 @@ El curso es impartido por Pablo Til
 
 ## Galeria
 
-![Arkanoid.png](Documents/Udemy - Arkanoid en C++/Arkanoid/ImagenesRepo/Arkanoid.png)
+![Arkanoid.png](Arkanoid/ImagenesRepo/Arkanoid.png)
 
-![Arkanoid2.png](gcardoso/Documents/Udemy - Arkanoid en C++/Arkanoid/ImagenesRepo/Arkanoid2.png)
+![Arkanoid2.png](Arkanoid/ImagenesRepo/Arkanoid2.png)
 
 ## Lo que se aprendera 
 
