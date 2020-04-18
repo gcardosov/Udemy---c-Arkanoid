@@ -14,9 +14,9 @@ El curso es impartido por Pablo Til
 
 ## Galeria
 
-![Arkanoid.PNG](ImagenesRepo/Arkanoid.PGN)
+![Arkanoid.png](ImagenesRepo/Arkanoid.png)
 
-![Arkanoid2.PNG](ImagenesRepo/Arkanoid2.png)
+![Arkanoid2.png](ImagenesRepo/Arkanoid2.png)
 
 ## Lo que se aprendera 
 
