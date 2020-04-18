@@ -70,11 +70,6 @@ int fila[]
 int main ()
 {
 
-
-
-
-
-
 }
 END_OF_MAIN();
 
