@@ -10,7 +10,7 @@ https://www.udemy.com/course/cpp-videojuego-arcade-allegro/
 En este curso se desarrolla desde cero un entorno de programación y multimedia
 con c++ con el IDE CodeBlocks la biblioteca allegro, ttf2pcx y grabber.
 
-El curso es impartido por Pablo Til
+El curso es impartido por Pablo Tilotta
 
 ## Galeria
 
