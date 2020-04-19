@@ -34,7 +34,7 @@ SAMPLE *sonido_gameOver;
 //Declaracion de objetos
 //Imagenes
 //Imagenes de tipo puntero
-BITMAP *buffer;
+BITMAP *buffer; //Crea una imagen donde se arma la imagen en donde se manda directo sin intermitencias a la vista no hay parpadeos
 BITMAP *logo;
 BITMAP *panel;
 BITMAP *recuadro;
@@ -58,13 +58,8 @@ BITMAP *base3;
 BITMAP *base4;
 
 
-
-
-
-
-
-
-
+int inicializo();
+void inicializo_pantalla();
 
 /*Variables para la jugabilidad*/
 int retardo=100;
@@ -78,7 +73,7 @@ int secuenciaMuerte=1;
 bool musica=true;
 bool efectos=true;
 //Variable que controla el archvio de puntajes maximos
-bool existeArchivo=;
+bool existeArchivo=false;
 
 //Banderas del juego
 bool juegoIniciado= false;
@@ -116,12 +111,79 @@ int filaBola;
 int elemento;
 
 //Vector para las filas que en donde se van a representar los ladrillos
-int fila[]
+int fila[]={20,50,80,110,1140,170,200};
 
 int main ()
 {
 
+//Funcion de inicialización
+    if(inicializo() == 1) return 1;
+
 }
 END_OF_MAIN();
+
+int inicializo()
+{
+    allegro_init();
+    install_keyboard();
+    if (install_sound(DIGI_AUTODETECT, MIDI_AUTODETECT, NULL) != 0)
+        {
+            allegro_message("Error ! Inicializanco sistema de sonido \n\n\n", allegro_error);
+            return 1;
+        }
+
+    inicializo_pantalla();
+
+    return 0;
+
+}
+
+void inicializo_pantalla()
+{
+
+    set_color_depth(32);
+    //Los valores en cero se usa para extener la ventana con pixels adicionales que se mantendran ocultos
+    //para luego hacer el scrolling
+    set_gfx_mode(GFX_AUTODETECT, ancho, alto, 0, 0);
+    //Crea una area de tipo bitma que alberga el resto de la imagenes
+    buffer=create_bitmap(ancho,alto);
+    logo=load_bitmap("img/logo.bmp", NULL);
+    panel=load_bitmap("img/panel.bmp", NULL);
+    recuadro=load_bitmap("img/recuadro.bmp", NULL);
+    fondo1=load_bitmap("img/fondo1.bmp", NULL);
+    fondo2=load_bitmap("img/fondo2.bmp", NULL);
+    fondo3=load_bitmap("img/fondo3.bmp", NULL);
+    fondo4=load_bitmap("img/fondo4.bmp", NULL);
+    fondo5=load_bitmap("img/fondo5.bmp", NULL);
+    lad1=load_bitmap("img/lad1.bmp", NULL);
+    lad2=load_bitmap("img/lad2.bmp", NULL);
+    lad3=load_bitmap("img/lad3.bmp", NULL);
+    lad4=load_bitmap("img/lad4.bmp", NULL);
+    lad5=load_bitmap("img/lad5.bmp", NULL);
+    lad6=load_bitmap("img/lad6.bmp", NULL);
+    lad7=load_bitmap("img/lad7.bmp", NULL);
+    ladd=load_bitmap("img/ladd.bmp", NULL);
+    gameOver=load_bitmap("img/gameOver.bmp", NULL);
+    base=load_bitmap("img/base.bmp", NULL);
+    base2=load_bitmap("img/base2.bmp", NULL);
+    base3=load_bitmap("img/base3.bmp", NULL);
+    base4=load_bitmap("img/base4.bmp", NULL);
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
 
 
