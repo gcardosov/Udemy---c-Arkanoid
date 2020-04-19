@@ -58,10 +58,16 @@ BITMAP *base2;
 BITMAP *base3;
 BITMAP *base4;
 
+<<<<<<< HEAD
 //Prototipos de funciones
 int inicializo();
 void inicializo_pantalla();
 void inicializo_sonidos();
+=======
+
+int inicializo();
+void inicializo_pantalla();
+>>>>>>> 17bfe9af15786ab75d868f064a422857dae8bb7a
 
 /*Variables para la jugabilidad*/
 int retardo=100;
@@ -120,6 +126,7 @@ int main ()
 
 //Funcion de inicialización
     if(inicializo() == 1) return 1;
+<<<<<<< HEAD
 //bucle de iteracion
     while(!fin)
     {
@@ -131,6 +138,8 @@ int main ()
         }
 
     }
+=======
+>>>>>>> 17bfe9af15786ab75d868f064a422857dae8bb7a
 
 }
 END_OF_MAIN();
@@ -145,8 +154,11 @@ int inicializo()
             return 1;
         }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 17bfe9af15786ab75d868f064a422857dae8bb7a
     inicializo_pantalla();
     inicializo_sonidos();
 
