@@ -1,3 +1,11 @@
+
+/********************************************
+ Arkanoid
+ Curso Udemy
+ Fecha: 15 abril 2020
+*********************************************/
+
+
 #include <allegro.h>
 #include <string>
 #include <conio.h>
@@ -58,16 +66,12 @@ BITMAP *base2;
 BITMAP *base3;
 BITMAP *base4;
 
-<<<<<<< HEAD
 //Prototipos de funciones
 int inicializo();
 void inicializo_pantalla();
 void inicializo_sonidos();
-=======
-
-int inicializo();
-void inicializo_pantalla();
->>>>>>> 17bfe9af15786ab75d868f064a422857dae8bb7a
+void armo_pantalla();
+void jugar();
 
 /*Variables para la jugabilidad*/
 int retardo=100;
@@ -119,27 +123,22 @@ int filaBola;
 int elemento;
 
 //Vector para las filas que en donde se van a representar los ladrillos
-int fila[]={20,50,80,110,1140,170,200};
+int fila[]={20,50,80,110,140,170,200};
 
 int main ()
 {
-
 //Funcion de inicialización
     if(inicializo() == 1) return 1;
-<<<<<<< HEAD
 //bucle de iteracion
     while(!fin)
     {
+        armo_pantalla();
         if(key[KEY_ESC] ) fin = true;
-        if(key[KEY_ENTER] && juegoIniciado==false)
-            {
-            jugar();
-            }
-        }
 
+        if(key[KEY_ENTER] && juegoIniciado==false){
+            jugar();
+        }
     }
-=======
->>>>>>> 17bfe9af15786ab75d868f064a422857dae8bb7a
 
 }
 END_OF_MAIN();
@@ -154,11 +153,8 @@ int inicializo()
             return 1;
         }
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 17bfe9af15786ab75d868f064a422857dae8bb7a
     inicializo_pantalla();
     inicializo_sonidos();
 
@@ -219,18 +215,28 @@ void inicializo_sonidos()
     sonido_VidaPerdida=load_wav("sonidos/fallo.wav");
     sonido_gameOver=load_wav("sonidos/game-over.wav");
 
-
-
 }
 
 
+void armo_pantalla()
+{
+    //Arma y desarma la pantalla es decir actualizar los frames
+    //crea la sensacion de movimiento
+    clear_to_color(buffer, 0x000000);
+    draw_sprite(buffer, logo, 610, 5);
+    draw_sprite(buffer, panel, 620, 140);
+    draw_sprite(buffer, recuadro, 5, 10);
+    draw_sprite(buffer, fondo1, 11, 16);
+    circlefill(buffer, bolaX, bolaY, 10, makecol(124, 250, 16));
+    blit(buffer, screen, 0,0,0,0, ancho, alto);
+
+}
+
+void jugar()
+{
 
 
-
-
-
-
-
+}
 
 
 
