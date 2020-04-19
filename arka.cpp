@@ -27,6 +27,7 @@ SAMPLE *sonido_LadrilloRoto;
 SAMPLE *sonido_RebotePelota;
 SAMPLE *sonido_Revivir;
 SAMPLE *sonido_VidaExtra;
+SAMPLE *sonido_RebotaParedes;
 SAMPLE *sonido_RebotaBase;
 SAMPLE *sonido_VidaPerdida;
 SAMPLE *sonido_gameOver;
@@ -133,6 +134,7 @@ int inicializo()
         }
 
     inicializo_pantalla();
+    inicializo_sonidos();
 
     return 0;
 
@@ -169,13 +171,32 @@ void inicializo_pantalla()
     base3=load_bitmap("img/base3.bmp", NULL);
     base4=load_bitmap("img/base4.bmp", NULL);
 
+}
 
 
+void inicializo_sonidos()
+{
+    set_volume(230, 209);
+    //Archivo mid
+    //El formato md se puede ejecutar en un loop de sonido
+    musicaInicio=load_midi("sonidos/ark.mid");
+    musicaJuego=load_midi("sonidos/Arkanoid.mid");
 
+    //Archivos WAV
+    sonido_InicioJuego=load_wav("sonidos/InicioJuego.wav");
+    sonido_InicioNivel=load_wav("sonidos/InicioNivel.wav");
+    sonido_LadrilloRoto=load_wav("sonidos/LadrilloRoto.wav");
+    sonido_RebotePelota=load_wav("sonidos/RebotePelota.wav");
+    sonido_VidaExtra=load_wav("sonidos/VidaExtra.wav");
+    sonido_RebotaParedes=load_wav("sonidos/reboteParedes.wav");
+    sonido_RebotaBase=load_wav("sonidos/rebotaBase.wav");
+    sonido_VidaPerdida=load_wav("sonidos/fallo.wav");
+    sonido_gameOver=load_wav("sonidos/game-over.wav");
 
 
 
 }
+
 
 
 
