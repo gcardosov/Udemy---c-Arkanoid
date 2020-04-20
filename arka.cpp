@@ -234,8 +234,33 @@ void armo_pantalla()
 
 void jugar()
 {
+    level1=1;
+    finJuego=false;
 
+    while(!key[KEY_ESC] && !finJuego)
+    {
+        inicializo_nivel();
 
+        while(!nuevoNivel && !key[KEY_ESC] && vidas>0)
+        {
+            if(key[KEY_SPACE] && enJuego=false)
+            {
+
+                enJuego=true;
+
+            }
+
+            chequeo_base();
+            if(enJuego){
+                muestro_ladrillos();
+                muevo_bola();
+            }
+
+            chequeo_teclasSonido();
+            armo_pantalla();
+            if(vidas==0) finJuego=true;
+        }
+    }
 }
 
 
